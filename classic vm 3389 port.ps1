@@ -1,3 +1,7 @@
+#WHAT THIS SCRIPT DOES
+# THIS SCRIPT BASICALLY LOOKS For the Classic VMs on the subscription and then go over the Endpoints for 3389 (RDP Port)
+#that could be potentially exposed to internet connectivity 
+
 ﻿#Please make sure to install the following 
 # ref https://docs.microsoft.com/en-us/powershell/azure/servicemanagement/install-azure-ps?view=azuresmps-4.0.0
 #install running on Powershell as administrator
