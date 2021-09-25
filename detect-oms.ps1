@@ -9,6 +9,7 @@ Param
 Set-AzContext -Subscription $subid
 $subid = ((Get-AzContext).Subscription.Id)
 Write-Output "Subscription ID:" ((Get-AzContext).Subscription.Id)
+az account set --subscription $subid
 $vms = get-azvm
 $extensions = 0
 $outputvms =  New-Object System.Collections.ArrayList
