@@ -39,6 +39,7 @@ foreach ($vm in $vms) {
         $obj | Add-Member -MemberType NoteProperty -Name Extension -Value  $extoms.name 
         $obj | Add-Member -MemberType NoteProperty -Name ExtensionVersion -Value $extomsinfo.typeHandlerVersion 
         $obj | Add-Member -MemberType NoteProperty -Name enableAutomaticUpgrade -Value   $extoms.enableAutomaticUpgrade
+        $obj | Add-Member -MemberType NoteProperty -Name enableAutomaticUpgradeMinor -Value   $extoms.autoUpgradeMinorVersion
         $obj | Add-Member -MemberType NoteProperty -Name StatusJson -Value   ($extoms | ConvertTo-Json) 
         [void]$outputvms.Add($obj) 
     }
