@@ -2,8 +2,6 @@
 
 #run like .\OMIcheckps7.ps1 -subid "AAAAA-BBBB-CCCC-DDD"
 
-$subs = Get-AzSubscription
-
 Param
 (
      [Parameter(Mandatory=$true, Position=0)]
