@@ -1,11 +1,16 @@
-﻿
-# Get all Azure Subscriptions
+﻿#POWERSHELL 7.1 Required
+
+#run like .\OMIcheckps7.ps1 -subid "AAAAA-BBBB-CCCC-DDD"
+
 $subs = Get-AzSubscription
 
+Param
+(
+     [Parameter(Mandatory=$true, Position=0)]
+     [string] $subid
+)
 
-foreach ($sub in $subs) {
-
-    Set-AzContext -Subscription $sub.Id
+    Set-AzContext -Subscription $subid
     Write-Output "Listing Virutal Machines in subscription '$($sub.Name)'"
     $VMs = Get-AzVM -Status
     $VMsSorted = $VMs | Sort-Object -Property ResourceGroupName
@@ -60,4 +65,4 @@ foreach ($sub in $subs) {
             Write-Host -ForegroundColor Gray `t`t  "RG: " $VM.ResourceGroupName "|||" "VMName" $VM.Name   ": VM has no OMI package"
         }
     }
-}
+
