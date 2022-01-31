@@ -56,7 +56,6 @@ $resp = try {
         "Accept"                 = "application/json, text/plain, */*"
         "Caller-Name"            = "Angular"
         "MS-CV"                  = "iAkirL0pakmPzWqj.14"
-        "x-request-verification" = "sNZovdIM0yVXGgYjAqUm7Vfzq2PBsZbcJtbEvOqY0_rYN6u_d_uhUXEJ15VRl2SahlZlRva0uYiYvML61v5wFvhNvuarZDLjHd8pdpuKeuY1:Wf0r_5A8P1dWN4DkhR62poT0s4TE5cVTqhJFI9md8pLdRLDJSQmqFsRA97BwbkxTV7XlmZAiAIrt6htvzivRzisskL7JcnZiEwCT71GGtbs1"
         "sec-ch-ua-platform"     = "`"Android`""
         "Origin"                 = "https://support.microsoft.com"
         "Sec-Fetch-Site"         = "same-origin"
@@ -134,7 +133,6 @@ $header = @{
     "scheme"                 = "https"
     "path"                   = $path
     "sec-ch-ua"              = "`"Microsoft Edge`";v=`"93`", `" Not;A Brand`";v=`"99`", `"Chromium`";v=`"93`""
-    "x-request-verification" = $verification 
     "authorization"          = "Bearer " + $tok.accessToken
     "accept"                 = "application/json, text/plain, */*"
     "caller-name"            = "Angular"
