@@ -161,3 +161,6 @@ catch { $_.Exception.Response }
 if ($resp.IsSuccessStatusCode -ne $false) {
     Write-Host "Success we succesfully uploaded the data "
 }
+else{
+    Write-Host "Failure uploading the data"
+}
