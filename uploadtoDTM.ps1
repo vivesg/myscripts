@@ -10,6 +10,12 @@ Param(
     [string]$file
 )
 
+#runnit on Run Powershell Script like this 
+# $url = "https://support.microsoft.com/blabla"
+# $file = "c:\folder\filename.ext"
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 $filelocation = $file
 $filename = ((Get-Item $filelocation)).Name
 $sizeoffile = ((Get-Item $filelocation)).length
@@ -20,7 +26,6 @@ foreach ($q in ($url -split '&')) {
     $name = [uri]::UnescapeDataString($kv[0]).Trim()
     $queryHash[$name] = [uri]::UnescapeDataString($kv[1])
 }
-
 
 
 $wid = $queryHash['wid']
@@ -34,17 +39,8 @@ $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
 $session.UserAgent = "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Mobile Safari/537.36 Edg/93.0.961.52"
 $session.Cookies.Add((New-Object System.Net.Cookie("SMCsiteLang", "en-US", "/", ".support.microsoft.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("SMCsiteDir", "ltr", "/", ".support.microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("EXPID", "bad3a5f8-5b94-4e85-acc6-05ab3a33c998", "/", "support.microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("MicrosoftApplicationsTelemetryDeviceId", "94ffb0ee-c66c-455b-b2af-13d6afd0c917", "/", "support.microsoft.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("smcpartner", "smc", "/", "support.microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("MC1", "GUID=8c5785b45dd64e76abc96c69ae77fd42&HASH=8c57&LV=202109&V=4&LU=1631928610369", "/", ".microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("MSFPC", "GUID=ebca01620af045668033a89106e8add2&HASH=ebca&LV=202109&V=4&LU=1631928610179", "/", "support.microsoft.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("MSCC", "NR", "/", ".microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("MS-CV", "lS//JQNy40GFav75.0", "/", ".microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("smc_expid", "smc-survey-feat-1|smc-survey-elg-1|vafx-canary-1|vafx-entry-point-2|com-getsupport-1|filterexposuretest|ce-aatest-1|smc-clicktale|sps-premier-msaas-1|vafx-snt-1|sps-ppx-office-1|sps-ppx-nonoffice-1|sps-bcsurvey-1|sps-oasproducts-1|sps-surface-power-1|sps-devices-s2sauth-1|tasmigrationmseg|sps-sc-1|vafx-enginev2-1|sps-details-1|amc-suspend-1|sps-devices-psd2-1|sps-bc-psd2|sps-xbox-power-1|sps-awa-fix-1|vafx-proxybot-1|sps-css-vnext-1|cogs-launchdeeplink-2|multitenanttasmigration_103|vafx-mts-french-azure-1|vafx-mts-german-1|vafx-mts-hungarian-1|vafx-mts-czech-1|vafx-mts-turkish-1|vafx-mts-korean-1|vafx-mts-polish-1|vafx-mts-dutch-1|vafx-mts-italian-1|vafx-mts-russian-1|vafx-mts-danish-1|vafx-mts-norwegian-1|vafx-mts-arabic-1|vafx-mts-swedish-1|vafx-mts-portuguese-1|sps-singlestackuhf-1|amc-quicksearch-1|vafx-darkmode-1", "/", ".support.microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("MS0", "692d1be7ca2a499f85531e56779a1f49", "/", ".microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("ai_session", "YLpss2DKP/NoSObq2muJ/p|1631999117674|1632001145159", "/", "support.microsoft.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("smc_expt", "2022-01-31T10:38:49.6560985Z", "/", ".support.microsoft.com")))
 
 
 $tok = 0
@@ -58,13 +54,11 @@ $resp = try {
         "sec-ch-ua-mobile"       = "?1"
         "Accept"                 = "application/json, text/plain, */*"
         "Caller-Name"            = "Angular"
-        "MS-CV"                  = "iAkirL0pakmPzWqj.14"
         "sec-ch-ua-platform"     = "`"Android`""
         "Origin"                 = "https://support.microsoft.com"
         "Sec-Fetch-Site"         = "same-origin"
         "Sec-Fetch-Mode"         = "cors"
         "Sec-Fetch-Dest"         = "empty"
-       
         "Accept-Encoding"        = "gzip, deflate, br"
         "Accept-Language"        = "en-US,en;q=0.9"
     } `
@@ -93,8 +87,6 @@ $myheader = @{
     "caller-name"            = "Angular"
     "sec-ch-ua-mobile"       = "?1"
     "overwrite"              = "false"
-    "ms-cv"                  = "ER/dxbVIik+guho/.15"
-    "partnerid"              = "9E544B52-8471-4B9A-86C2-25768630A8A1"
     "sec-ch-ua-platform"     = "`"Android`""
     "origin"                 = "https://support.microsoft.com"
     "sec-fetch-site"         = "same-site"
@@ -140,9 +132,7 @@ $header = @{
     "accept"                 = "application/json, text/plain, */*"
     "caller-name"            = "Angular"
     "sec-ch-ua-mobile"       = "?1"
-    "ms-cv"                  = "ER/dxbVIik+guho/.17"
     "chunkindex"             = "0"
-    "partnerid"              = "9E544B52-8471-4B9A-86C2-25768630A8A1"
     "sec-ch-ua-platform"     = "`"Android`""
     "origin"                 = "https://support.microsoft.com"
     "sec-fetch-site"         = "same-site"
