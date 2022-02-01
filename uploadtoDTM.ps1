@@ -2,6 +2,9 @@
 
 #This scripts helps to upload a file to DTM 
 #Please provide the URL Generated and the file name to be uploaded
+#run like this .\uploadtoDTM.ps1 -url "https://support.microsoft.com/blabla......." -file "c:\file.ext"
+# or run it on Azure VM Custom Script Extension as well
+
 Param(
     [string]$url,
     [string]$file
