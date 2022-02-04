@@ -2,7 +2,7 @@
 
 #This scripts helps to upload a file to DTM 
 #Please provide the URL Generated and the file name to be uploaded
-#run like this .\uploadtoDTM.ps1 -url "https://support.microsoft.com/blabla......." -file "c:\file.ext"
+#run like this .\uploadtoDTM.ps1 -url "https://support.microsoft.com/..." -file "c:\file.ext"
 # or run it on Azure VM Custom Script Extension as well
 
 Param(
@@ -11,7 +11,7 @@ Param(
 )
 
 #runnit on Run Powershell Script like this 
-# $url = "https://support.microsoft.com/blabla"
+# $url = "https://support.microsoft.com/...."
 # $file = "c:\folder\filename.ext"
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -33,7 +33,6 @@ $to = $queryHash['https://support.microsoft.com/files?workspace']
 $mybody = @"
 {"workspaceToken":"$to","email":""}
 "@
-
 
 $tok = 0
 $resp = try { 
@@ -70,7 +69,7 @@ $chunks = [int][Math]::Ceiling(([int]$sizeoffile) / 134217728)
 $body = @"
 {"chunkSize":134217728,"contentType":"text/xml","fileSize":$sizeoffile,"numberOfChunks":$chunks}
 "@
-Write-Host $body
+
 $resp = try { 
     Invoke-WebRequest -UseBasicParsing -Uri $uri `
         -Method "PUT" `
@@ -95,6 +94,7 @@ $header = @{
     "accept"          = "application/json, text/plain, */*"
     "chunkindex"      = "0"
     "accept-encoding" = "gzip, deflate, br"
+    
 }
 
 $resp = try { 
