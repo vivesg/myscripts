@@ -62,7 +62,7 @@ def upload(file, params):
         params["wid"] + "/folders/external/files?filename=" + f_name
     content_path = os.path.abspath(file)
     content_size = os.stat(content_path).st_size
-    headers = {
+    myheaders = {
         "method": "PATCH",
         "authority": "api.dtmnebula.microsoft.com",
         "Host": "api.dtmnebula.microsoft.com",
@@ -77,12 +77,12 @@ def upload(file, params):
     }
     resp = 1
     f = open(content_path, 'rb')
-    i = 1
+    i = 0
     for chunk in read_in_chunks(f):
-        headers['chunkindex'] = str(i)
+        myheaders['chunkindex'] = str(i)
         i = +1
         try:
-            r = requests.patch(uri, data=chunk, headers=headers)
+            r = requests.patch(uri, data=chunk, headers=myheaders)
             if r.status_code > 299:
                 print("HTTP Error code", r.status_code)
                 print("Data has not been uploaded properly")
