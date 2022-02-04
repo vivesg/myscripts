@@ -1,6 +1,6 @@
 # Developed by gevivesh
 
-from math import ceil
+import math
 import sys  # Import for OS File , and getting parameters
 import requests
 from urllib import parse
