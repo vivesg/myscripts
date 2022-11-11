@@ -4,7 +4,7 @@
 #Connect-AzAccount 
 
 #Set the Subscription please use the SubId
-Set-AzContext -Subscription "33ff68b5-192b-4438-b2d5-c8b925dc9f6f"
+Set-AzContext -Subscription "xxxxx-xxxxx-xxxxx-xxxxx-"
 
 $Schedules = Get-AzResource -ResourceType "microsoft.devtestlab/schedules"
 
