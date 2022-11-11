@@ -1,4 +1,6 @@
-﻿# GET ALL THE VMS ON THE SUB THAT HAVE THE AUTOSHUTDOWN OPTION Setup Enabled/Disabled
+#author gevivesh
+# THE SCRIPT SOFTWARE IS PROVIDED "AS IS" and For educational purposes
+# GET ALL THE VMS ON THE SUB THAT HAVE THE AUTOSHUTDOWN OPTION Setup Enabled/Disabled
 
 
 Connect-AzAccount 
