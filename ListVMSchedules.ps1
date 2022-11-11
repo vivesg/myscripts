@@ -1,7 +1,7 @@
 ﻿# GET ALL THE VMS ON THE SUB THAT HAVE THE AUTOSHUTDOWN OPTION ENABLED
 
 
-#Connect-AzAccount 
+Connect-AzAccount 
 
 #Set the Subscription please use the SubId
 Set-AzContext -Subscription "xxxxx-xxxxx-xxxxx-xxxxx-"
