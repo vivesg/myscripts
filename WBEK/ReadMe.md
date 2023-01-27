@@ -1,7 +1,19 @@
 ## How To run it
 Please download 
 `decrypt.py` and `requirements.txt` 
-run 
+
+On Cloudshell  `shell.azure.com` Select Powershell mode 
+
+![image](https://user-images.githubusercontent.com/8367687/215172927-f3e2516d-d75e-4d29-acde-4881e5de0b58.png)
+
+Download the Files manually or with the following commands
+
+    wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/decrypt.py -outfile decrypt.py
+    
+
+    wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/requirements.txt -outfile requirements.txt
+
+Run 
 
     pip install -r requirements.txt
 then please run
