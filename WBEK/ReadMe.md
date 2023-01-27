@@ -26,4 +26,5 @@ And provide the values that's it
 Then on the same path you are going to find the file that you generated with the name,  on the previous image the file is key2.bek as an example
 
 Then you can just click on download on the Shell session and put the name of the file and you you are all set you have the file to decrypt/unlock the VM
+
 ![image](https://user-images.githubusercontent.com/8367687/215176373-9cb49d82-2438-45ef-8fe5-6ec3e4b0e847.png)
