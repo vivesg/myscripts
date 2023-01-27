@@ -19,3 +19,8 @@ then please run
     python decrypt.py 
 
 And provide the values that's it
+
+![image](https://user-images.githubusercontent.com/8367687/215175909-71947dd3-f31f-40ab-8dd4-5fc9de690199.png)
+
+
+Then on the same path you are going to find the file that you generated with the name,  on the previous image the file is key2.bek as an example
