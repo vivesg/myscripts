@@ -2,6 +2,8 @@
 # How to Run commands and check the output on Azure Virtual Machine
 # Example using the Azure REST API
 # Example as-is please run this as your own risk
+# I Used POST and GET to REST API to run commands
+# https://learn.microsoft.com/en-us/rest/api/compute/virtual-machines/run-command?tabs=HTTP
 
 # Login to Azure 
 Connect-AzAccount 
@@ -18,14 +20,13 @@ $location = "eastus2" # please add the region of where the VM is located
 $subid = "ffff-xxxx-ffff-1111-subid" #add the sub id
 
 
-
 #creating the header 
 $authHeader = @{
   'Authorization' = 'Bearer ' + $token
   'Content-Type'  = 'application/json'
 }
 
-# SENDING THE COMMAND (AZURE RUN COMMAND)
+# SENDING THE COMMAND (AZURE RUN COMMAND) 
 
 $restUri = "https://management.azure.com/subscriptions/" + $subid + '/resourceGroups/' + $RGNAME + '/providers/Microsoft.Compute/virtualMachines/' + $VMNAME + '/runCommands/' + $COMMANDNAME + '?api-version=2021-07-01'
 
