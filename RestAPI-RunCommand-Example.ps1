@@ -12,7 +12,8 @@ Connect-AzAccount
 $VMNAME = "VMNAME"
 $RGNAME = "RGNAME"
 $COMMANDNAME = "COMMANDNAME"
-$SCRIPT = "ipconfig"   # this is the command that we are going to run
+$SCRIPT = "ipconfig"   # this is the command that we are going to run https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig 
+
 
 $token = (Get-AzAccessToken).Token   # We are using Azure Powershell module to get the Token you can get it from another place ;)
 
