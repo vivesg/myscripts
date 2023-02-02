@@ -3,7 +3,7 @@
 # Example using the Azure REST API
 # Example as-is please run this as your own risk
 
-# Login to Azurre
+# Login to Azure 
 Connect-AzAccount 
 
 #declare the variables
@@ -11,7 +11,9 @@ $VMNAME = "VMNAME"
 $RGNAME = "RGNAME"
 $COMMANDNAME = "COMMANDNAME"
 $SCRIPT = "ipconfig"   # this is the command that we are going to run
-$token = (Get-AzAccessToken).Token
+
+$token = (Get-AzAccessToken).Token   # We are using Azure Powershell module to get the Token you can get it from another place ;)
+
 $location = "eastus2" # please add the region of where the VM is located
 $subid = "ffff-xxxx-ffff-1111-subid" #add the sub id
 
