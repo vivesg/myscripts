@@ -31,7 +31,10 @@ client = ResourceManagementClient(credential=default_credential,subscription_id=
 keyvaultclient = SecretClient(vault_url=KVUri, credential=default_credential)
 secrets = keyvaultclient.list_properties_of_secrets()
 for secret in secrets:
-    Name = secret.tags.get('MachineName') 
+    if secret.tags != None:
+        Name = secret.tags.get('MachineName') 
+    else:
+        Name = None
     if Name != None:
         if Name.upper()==VMNAME.upper():
             SECRET = secret.name
