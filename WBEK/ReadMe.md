@@ -25,7 +25,7 @@ And provide the values that's it
 ![image](https://github.com/vivesg/myscripts/assets/8367687/4b7e5f0e-0657-4b77-ab4c-8444043a0b41)
 
 
-Then on the same path you are going to find the file that you generated with the name,  on the previous image the file is key2.bek as an example
+Then on the same path you are going to find the file that you generated with the name,  on the previous image the file is WRAPBEK_VM_adeBEKtoKEK_drive_C_20231129_2257.bek as an example
 
 Then you can just click on download on the Shell session and put the name of the file and you you are all set you have the file to decrypt/unlock the VM
 
