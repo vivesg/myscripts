@@ -20,19 +20,10 @@ KEY = ""
 SECRET = ""
 FILENAME = ".bek"
 
-
-KEYVAULTNAME = "keyvault-aeaue5yxm5a26"
-SUBID = "33ff68b5-192b-4438-b2d5-c8b925dc9f6f"
-VMNAME = "adeBEKtoKEK"
-
-
-
-
 #REMOVE UNWANTES SPACES
 KEYVAULTNAME = KEYVAULTNAME.replace(" ", "")
 SUBID = SUBID.replace(" ", "")
 VMNAME = VMNAME.replace(" ", "")
-
 
 #CODE
 KVUri = "https://" + KEYVAULTNAME + ".vault.azure.net/"
