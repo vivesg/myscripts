@@ -20,7 +20,8 @@ then please run
 
 And provide the values that's it
 
-![image](https://user-images.githubusercontent.com/8367687/215175909-71947dd3-f31f-40ab-8dd4-5fc9de690199.png)
+![image](https://github.com/vivesg/myscripts/assets/8367687/e381f562-3df6-48d2-9398-72e6da9b6f35)
+
 
 
 Then on the same path you are going to find the file that you generated with the name,  on the previous image the file is key2.bek as an example
