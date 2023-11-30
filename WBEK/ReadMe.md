@@ -2,6 +2,7 @@
 
 On Cloudshell  `shell.azure.com` Select Powershell mode 
 
+![image](https://user-images.githubusercontent.com/8367687/215172927-f3e2516d-d75e-4d29-acde-4881e5de0b58.png)
 
 
 
