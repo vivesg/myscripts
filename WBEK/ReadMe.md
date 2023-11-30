@@ -2,7 +2,8 @@
 
 On Cloudshell  `shell.azure.com` Select Powershell mode 
 
-![image](https://user-images.githubusercontent.com/8367687/215172927-f3e2516d-d75e-4d29-acde-4881e5de0b58.png)
+![image](https://github.com/vivesg/myscripts/assets/8367687/4b7e5f0e-0657-4b77-ab4c-8444043a0b41)
+
 
 Download the Files manually or with the following commands or upload the from your cloushell session  
 
