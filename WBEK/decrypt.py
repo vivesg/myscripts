@@ -68,10 +68,10 @@ for secret in secrets:
                 sec  = retrieved_secret.value  
                 bytes = sec.encode()
                 rawbytes = base64.b64decode(bytes)
-                with open("BEK_VM_" + VMNAME + "_drive_" + VolumeLetter[0] + "_" + time + "_" + FILENAME , 'wb') as fw: 
+                with open("BEK_VM_" + VMNAME + "_drive_" + VolumeLetter[0] + "_" + time + FILENAME , 'wb') as fw: 
                     fw.write(rawbytes)
                 print("===============================================")   
-                print("BEK File Key generated name:  " +  "BEK_VM_" + VMNAME + "_drive_" + VolumeLetter[0] + "_" + time + "_" + FILENAME )
+                print("BEK File Key generated name:  " +  "BEK_VM_" + VMNAME + "_drive_" + VolumeLetter[0] + "_" + time  + FILENAME )
                 print("VM: " + VMNAME )
                 print("Volume Letter: " + VolumeLetter)    
                 print("BEK Created on: "  + time)
