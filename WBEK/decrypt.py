@@ -25,10 +25,22 @@ KEYVAULTNAME = KEYVAULTNAME.replace(" ", "")
 SUBID = SUBID.replace(" ", "")
 VMNAME = VMNAME.replace(" ", "")
 
+# Determine the cloud environment and set the Key Vault URI accordingly
+cloud_environment = input("Enter the cloud environment (Public, Fairfax, Mooncake): ").strip().lower()
+if cloud_environment == "fairfax":
+    KVUri = "https://" + KEYVAULTNAME + ".vault.usgovcloudapi.net/"
+elif cloud_environment == "mooncake":
+    KVUri = "https://" + KEYVAULTNAME + ".vault.azure.cn/"
+else:
+    KVUri = "https://" + KEYVAULTNAME + ".vault.azure.net/"
+
+client = ResourceManagementClient(credential=default_credential, subscription_id=SUBID)
+if cloud_environment == "fairfax" or cloud_environment == "mooncake":
+    keyvaultclient = SecretClient(vault_url=KVUri, credential=default_credential, verify_challenge_resource=False)
+else:
+    keyvaultclient = SecretClient(vault_url=KVUri, credential=default_credential)
+
 #CODE
-KVUri = "https://" + KEYVAULTNAME + ".vault.azure.net/"
-client = ResourceManagementClient(credential=default_credential,subscription_id=SUBID)
-keyvaultclient = SecretClient(vault_url=KVUri, credential=default_credential)
 secrets = keyvaultclient.list_properties_of_secrets()
 for secret in secrets:
     if secret.tags != None:
