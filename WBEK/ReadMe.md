@@ -15,7 +15,7 @@ Download the Files manually or with the following commands or upload the from yo
 
 Run
 
-    pip install -r --user requirements.txt 
+    pip install -r requirements.txt --user
 then please run
 
     python decrypt.py 
