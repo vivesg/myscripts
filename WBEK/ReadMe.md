@@ -8,10 +8,10 @@ On Cloudshell  `shell.azure.com` Select Powershell mode
 
 Download the Files manually or with the following commands or upload the from your cloushell session  
 
-    wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/decrypt.py -outfile decrypt.py
+    wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/decrypt.py -o decrypt.py
     
 
-    wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/requirements.txt -outfile requirements.txt
+    wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/requirements.txt -o requirements.txt
 
 Run
 
