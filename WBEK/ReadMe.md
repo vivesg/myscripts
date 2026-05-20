@@ -7,7 +7,7 @@ On Cloudshell  `shell.azure.com` Select Powershell mode
 
 
 
-⚠️ **If you are using CloudShell please use the following (Download time are faster)⚠️**
+⚠️ **If you are using CloudShell please use the following (Download times are faster)⚠️**
     
     curl -o decrypt.py https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/decrypt.py 
     
