@@ -6,11 +6,17 @@ On Cloudshell  `shell.azure.com` Select Powershell mode
 
 
 
-Download the Files manually or with the following commands or upload the from your cloushell session  
+
+⚠️ **If you are using CloudShell please use the following (Download time are faster)⚠️**
+    
+    curl -o decrypt.py https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/decrypt.py 
+    
+    curl -o requirements.txt https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/requirements.txt 
+
+Download the Files manually or if you dont have curl use the following (Slower 🐢 on Cloudshell)
 
     wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/decrypt.py -O decrypt.py
     
-
     wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/requirements.txt -O requirements.txt
 
 Run
