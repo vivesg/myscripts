@@ -6,20 +6,25 @@ On Cloudshell  `shell.azure.com` Select Powershell mode
 
 
 
-
-⚠️ **If you are using CloudShell please use the following (Download times are faster)⚠️**
+## Download the script and requirements
+⚠️ **If you are using CloudShell please use the method 1 (Download times are faster)⚠️**
+### Method 1
     
     curl -o decrypt.py https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/decrypt.py 
     
     curl -o requirements.txt https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/requirements.txt 
+    
+Go to the How to Run Section
 
+### Method 2
 Download the Files manually or if you dont have curl use the following (Slower 🐢 on Cloudshell)
 
     wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/decrypt.py -O decrypt.py
     
     wget https://raw.githubusercontent.com/vivesg/myscripts/master/WBEK/requirements.txt -O requirements.txt
+Go to the How to Run Section
 
-Run
+## How To Run
 
     pip install -r requirements.txt --user
 then please run
