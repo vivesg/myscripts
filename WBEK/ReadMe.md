@@ -25,6 +25,7 @@ Download the Files manually or if you dont have curl use the following (Slower ð
 Go to the How to Run Section
 
 ## How To Run
+Please run this command
 
     pip install -r requirements.txt --user
 then please run
